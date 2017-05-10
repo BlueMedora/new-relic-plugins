@@ -126,6 +126,8 @@ Below are the fields needed to configure Insights access.
 
 `proxy_password` - The proxy password
 
+`proxy_protocol` - The proxy protocol (HTTP/HTTPS) used for Insights uploads
+
 **Example:**
 
 ```
