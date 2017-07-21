@@ -1,4 +1,4 @@
-# ![Blue Medora Logo](http://www.bluemedora.com/favicon.ico) Blue Medora Cassandra Plugin For New Relic 
+# New Relic Plugin for Apache Cassandra
 
 The **Blue Medora Apache Cassandra Plugin for New Relic** allows you to monitor your Cassandra databases within the New Relic platform by collecting metrics from the system and displaying them in an arrangement of intuitive, graphical based monitoring dashboards. 
 
