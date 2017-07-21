@@ -35,7 +35,7 @@ Once the NPI tool has been installed, run the following command:
 
 **Note:** This command will take care of the creation of `newrelic.json` and `plugin.json` files described in the [Configuring the Plugin](#Configuring-the-Plugin) section.
 
-###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-apache-cassandra/newrelic_apache_cassandra_plugin-1.0.3_20170117_151412.tar.gz)
+###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-apache-cassandra/newrelic_apache_cassandra_plugin-1.0.4_20170721_130118.tar.gz)
 
 ----     
 
@@ -187,7 +187,7 @@ Make a copy of this template and rename it to `plugin.json`. Shown below is an e
         "nodeTable": true,
         "table": true,
         "relationships": true,
-        "notifications": "INFO"   // Valid values: true, false, "ERROR", "WARNING", "INFO", "DEBUG"
+        "notifications": "INFO"
       }
     }
   ]
