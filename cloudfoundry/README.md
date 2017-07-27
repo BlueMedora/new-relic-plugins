@@ -198,7 +198,7 @@ Once the NPI tool has been installed, run the following command:
 
 **Note:** This command will take care of the creation of `newrelic.json` and `plugin.json` files described in the [Configuring the Plugin](#Configuring-the-Plugin) section.
 
-###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-cloudfoundry/newrelic_cloudfoundry_plugin-2.0.1_20170629_164254.tar.gz)
+###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-cloudfoundry/newrelic_cloudfoundry_plugin-2.0.2_20170727_151026.tar.gz)
 
 ----
     
@@ -403,10 +403,10 @@ For questions or issues regarding the Blue Medora Cloud Foundry Plugin for New R
 
 | Metric Name  |  Description |
 |:------------- |:-------------|
-| Average CPU Usage (%) | The Average CPU Usage for each monitored Cloud Controller |
-| Dropped Messages Rate (messages/second) | The Dropped Message Rate for each monitored Diego Cell |
-| Received Messages Rate (messages/second) | The Received Message Rate for each monitored GoRouter |
-| Requests Rate (requests/second) | The Requests Rate for each monitored GoRouter |
+| GoRouter Request Rates (requests/second) | The Requests Rate for each monitored GoRouter |
+| Diego Brain Auction Rates (auctions/second) | All auction rates associated with the Diego Brain resources |
+| Diego Cell Used Memory (GB) | All Used Memory data associated with the Diego Cell resource |
+| Diego Cell Active Goroutines (GB) | All Active Goroutine data associated with the Diego Cell resource |
 
 **Access**
 
@@ -437,7 +437,7 @@ For questions or issues regarding the Blue Medora Cloud Foundry Plugin for New R
 | Delayed Jobs (jobs) | The Delayed Jobs for each monitored Cloud Controller |
 | Failed Jobs (jobs) | The Failed Jobs for each monitored Cloud Controller |
 
-**Diego Brains**
+**Diego Brain**
 
 | Metric Name  |  Description |
 |:------------- |:-------------|
@@ -462,7 +462,7 @@ For questions or issues regarding the Blue Medora Cloud Foundry Plugin for New R
 | Auctioneer Cumulative Task Auctions Failed Rate (auctions/second) | The Auctioneer Cumulative Task Auctions Failed Rate for each monitored Diego Brain |
 | Auctioneer Cumulative Task Auctions Started Rate (auctions/second) | The Auctioneer Cumulative Task Auctions Started Rate for each monitored Diego Brain |
 
-**Diego Cells**
+**Diego Cell**
 
 | Metric Name  |  Description |
 |:------------- |:-------------|
@@ -489,6 +489,5 @@ For questions or issues regarding the Blue Medora Cloud Foundry Plugin for New R
 | Active Goroutines (routines) | The Active Goroutines for each monitored Gorouter |
 | Memory Allocation Rates (allocations/second) | The Memory Allocation Rates for each monitored Gorouter |
 | Memory Deallocation Rates (deallocations/second) | The Memory Deallocation Rates for each monitored Gorouter |
-| Received Messages Rates (messages/second) | The Received Message Rate for each monitored GoRouter |
 | Requests Rates (requests/second) | The Requests Rate for each monitored GoRouter |
 | HTTP Responses Rates (responses/second) | The HTTP Responses Rate for each monitored GoRouter |
