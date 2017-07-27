@@ -37,7 +37,7 @@ Once the NPI tool has been installed, run the following command:
 
 **Note:** This command will take care of the creation of `newrelic.json` and `plugin.json` files described in the [Configuring the Plugin](#Configuring-the-Plugin) section.
 
-###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-ibm-db2/newrelic_ibm_db2_plugin-2.1.2_20170628_204242.tar.gz) 
+###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-ibm-db2/newrelic_ibm_db2_plugin-2.2.0_20170727_125334.tar.gz)
 
 ----
     
@@ -315,6 +315,17 @@ For questions or issues regarding the Blue Medora IBM DB2 plugin for New Relic, 
 | Free Pages (pages) | The number of free pages per tablespace |
 | Used Pages (pages) | The number of used pages per tablespace |
 | Usable Pages (pages) | The number of usable pages per tablespace |
+
+**Queries**
+
+| Metric Name  |  Description |
+|:------------- |:-------------|
+| Executions | The number of executions of a query |
+| Average Execution Time (ms) | The average amount of time a query takes to execute |
+| Average User CPU Time (ms) | The average user CPU time consumed by a query |
+| Average System CPU Time (ms) | The average system CPU time consumed by a query |
+| Rows Read (rows/minute) | The number of rows read by a particular query every minute |
+| Rows Written (rows/minute) | The number of rows written by a particular query every minute |
 
 **Summary**
 
