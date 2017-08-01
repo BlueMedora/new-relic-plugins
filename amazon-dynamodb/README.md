@@ -239,6 +239,7 @@ For questions or issues regarding the Amazon DynamoDB Plugin for New Relic, visi
 
 | Metric Name  |  Description |
 |:------------- |:-------------|
+| Table Sizes (KB) | Size per DynamoDB table |
 | Read Throttle Events (events) | The number of read throttle events per DynamoDB tables |
 | Write Throttle Events (events) | The number of write throttle events per DynamoDB tables |
 | Read Capacity Usage (%) | Percent usage of Provisioned Read capacity per DynamoDB table |
