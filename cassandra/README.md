@@ -25,7 +25,7 @@ The Apache Cassandra plugin connects to the Apache Cassandra database using JMX.
 
 We recommend using the New Relic Platform Installer for installing and running your Blue Medora plugins for New Relic. 
  
-The New Relic Platform Installer (NPI) is a command line tool that helps you easily download, configure, and manage New Relic Platform Plugins. For more information, please refer to the [Installing an NPI-compatible plugin documentation](https://docs.newrelic.com/docs/plugins/plugins-new-relic/installing-plugins/installing-npi-compatible-plugin). 
+The New Relic Platform Installer (NPI) is a command line tool that helps you easily download, configure, and manage New Relic Platform Plugins. For more information, please refer to the [Installing an NPI-compatible plugin documentation](https://docs.newrelic.com/docs/plugins/plugins-new-relic/installing-plugins/installing-npi-compatible-plugin).
 
 Once the NPI tool has been installed, run the following command: 
 
@@ -263,8 +263,6 @@ For questions or issues regarding the Apache Cassandra Plugin for New Relic, vis
 |:------------- |:-------------|
 | Read Latency (ms) | The read latency for each Node |
 | Write Latency (ms) | The write latency for each Node |
-| CAS Read Latency (ms) | The CAS read latency for each Node |
-| CAS Write Latency (ms) | The CAS write latency for each Node |
 | Range Slice (ms) | The range slice latency for each Node |
 | View Write Latency (ms) | The view write latency for each Node |
 
@@ -272,10 +270,10 @@ For questions or issues regarding the Apache Cassandra Plugin for New Relic, vis
 
 | Metric Name  |  Description |
 |:------------- |:-------------|
-| Average Read Latency (ms) | The average read latency for each Node Keyspace |
-| Average Write Latency (ms) | The average write latency for each Node Keyspace |
-| Average Range Latency (ms) | The average range slice latency for each Node Keyspace |
-| Total Disk Space Used (MB) | The amount of Disk Space Used by each Node Keyspace |
+| Average Read Latency (ms) | The average read latency for each Keyspace |
+| Average Write Latency (ms) | The average write latency for each Keyspace |
+| Average Range Latency (ms) | The average range slice latency for each Keyspace |
+| Total Disk Space Used (MB) | The amount of Disk Space Used by each Keyspace |
 
 **Node Keyspaces**
 
@@ -284,18 +282,16 @@ For questions or issues regarding the Apache Cassandra Plugin for New Relic, vis
 | Read Latency (ms) | The read latency for each Node Keyspace |
 | Write Latency (ms) | The write latency for each Node Keyspace |
 | Range Latency (ms) | The range latency for each Node Keyspace |
-| CAS Commit Latency (ms) | The CAS Commit latency for each Node Keyspace |
-| CAS Prepare Latency (ms) | The CAS Prepare latency for each Node Keyspace |
-| CAS Propose Latency (ms) | The CAS Propose latency for each Node Keyspace |
+| Total Disk Space Used (GB) | The amount of Disk Space Used by each Node Keyspace |
 
 **Tables**
 
 | Metric Name  |  Description |
 |:------------- |:-------------|
-| Average Read Latency (ms) | The average read latency for each Node Table |
-| Average Write Latency (ms) | The average write latency for each Node Table |
-| Average Range Latency (ms) | The average range slice latency for each Node Table |
-| Total Disk Space Used (MB) | The amount of Disk Space Used by each Node Table |
+| Average Read Latency (ms) | The average read latency for each Table |
+| Average Write Latency (ms) | The average write latency for each Table |
+| Average Range Latency (ms) | The average range slice latency for each Table |
+| Total Disk Space Used (MB) | The amount of Disk Space Used by each Table |
 
 **Node Tables**
 
@@ -304,7 +300,4 @@ For questions or issues regarding the Apache Cassandra Plugin for New Relic, vis
 | Read Latency (ms) | The read latency for each Node Table |
 | Write Latency (ms) | The write latency for each Node Table |
 | Range Latency (ms) | The range latency for each Node Table |
-| CAS Commit Latency (ms) | The CAS Commit latency for each Node Table |
-| CAS Prepare Latency (ms) | The CAS Prepare latency for each Node Table |
-| CAS Propose Latency (ms) | The CAS Propose latency for each Node Table |
 | Total Disk Space Used (GB) | The amount of Disk Space Used by each Node Table |
