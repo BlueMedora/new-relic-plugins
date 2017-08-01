@@ -36,7 +36,7 @@ Once the NPI tool has been installed, run the following command:
 
 **NOTE:** This command will take care of the creation of `newrelic.json` and `plugin.json` files described in the [Configuring the Plugin](#Configuring-the-Plugin) section.
 
-###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-amazon-dynamodb/newrelic_amazon_dynamodb_plugin-2.1.1_20161220_184716.tar.gz) 
+###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-amazon-dynamodb/newrelic_amazon_dynamodb_plugin-2.1.2_20170801_144305.tar.gz)
 
 ----     
 
