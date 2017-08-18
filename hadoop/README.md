@@ -12,7 +12,7 @@ The Apache Hadoop plugin connects to the Apache Hadoop cluster using read-only J
 
 **New Relic Requirements**
 
-- A New Relic account. (Sign up for a free account [here](https://newrelic.com/signup/). 
+- A New Relic account. (Sign up for a free account [here](https://newrelic.com/signup/).)
 
 **Apache Hadoop Plugin Requirements**
 
@@ -36,7 +36,7 @@ Once the NPI tool has been installed, run the following command:
 
 **Note:** This command will take care of the creation of `newrelic.json` and `plugin.json` files described in the [Configuring the Plugin](#Configuring-the-Plugin) section.
 
-###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-apache-hadoop/newrelic_apache_hadoop_plugin-1.0.1_20161220_184748.tar.gz)
+###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-apache-hadoop/newrelic_apache_hadoop_plugin-1.0.2_20170818_174126.tar.gz)
 
 ----     
 
@@ -246,11 +246,12 @@ For questions or issues regarding the Apache Hadoop Plugin for New Relic, visit 
 | Metric Name  |  Description |
 |:------------- |:-------------|
 | Cluster Node Managers | The number of Node Managers in each state (Decommissioned, Unhealthy, Rebooted, Lost, Active) |
-| Active Users | The total number of Active Users|
 | Applications Failed | The number of Application failures |
-| Data Nodes Dead | The number of Data Nodes currently dead |
-| Volume Failures | The number of Volume failures |
-| Containers Failures | The number of Containers failures |
+| Applications Running | The number of Applications running |
+| Applications Completed | The number of Application completions |
+| Node Manager Memory Allocated (GB) | The amount of Allocated Memory on each Node Manager |
+| Node Manager Memory Available (GB) | The amount of Available Memory on each Node Manager |
+
 
 **Data Nodes**
 
