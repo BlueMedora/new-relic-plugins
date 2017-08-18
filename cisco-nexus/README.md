@@ -180,19 +180,19 @@ Make a copy of this template and rename it to `plugin.json`. Shown below is an e
       "protocol": "https" //Valid values: http, https,
       "validate_certificate_against_truststore": "false" //Valid values: true, t, yes, y, 1, false, no, n, 0,
       "send_to_plugin": {
-        "cisco_nexus_switch": true,
-        "cisco_nexus_port": true,
-        "cisco_nexus_l3_interface": true
+        "cisco_networking_switch": true,
+        "cisco_networking_port": true,
+        "cisco_networking_l3_interface": true
       },
       "send_to_insights": {
-        "cisco_nexus_hsrp_group": true,
-        "cisco_nexus_hsrp_group_member": true,
-        "cisco_nexus_fan": true,
-        "cisco_nexus_power_module": true,
-        "cisco_nexus_sensor": true,
-        "cisco_nexus_switch": true,
-        "cisco_nexus_port": true,
-        "cisco_nexus_l3_interface": true,
+        "cisco_networking_hsrp_group": true,
+        "cisco_networking_hsrp_group_member": true,
+        "cisco_networking_fan": true,
+        "cisco_networking_power_module": true,
+        "cisco_networking_sensor": true,
+        "cisco_networking_switch": true,
+        "cisco_networking_port": true,
+        "cisco_networking_l3_interface": true,
         "relationships": true,
         "notifications": "INFO" //Valid values: true, false, ERROR, WARNING, INFO, DEBUG
       }
@@ -208,19 +208,19 @@ Make a copy of this template and rename it to `plugin.json`. Shown below is an e
       "privacy_type": "privAES256" //Valid values: privAES256, privAES192, privAES128, privDES, priv3DES ,
       "security_level": "auth_priv" //Valid values: auth_priv, auth_nopriv, noauth_priv ,
       "send_to_plugin": {
-        "cisco_nexus_switch": true,
-        "cisco_nexus_port": true,
-        "cisco_nexus_l3_interface": true
+        "cisco_networking_switch": true,
+        "cisco_networking_port": true,
+        "cisco_networking_l3_interface": true
       },
       "send_to_insights": {
-        "cisco_nexus_hsrp_group": true,
-        "cisco_nexus_hsrp_group_member": true,
-        "cisco_nexus_fan": true,
-        "cisco_nexus_power_module": true,
-        "cisco_nexus_sensor": true,
-        "cisco_nexus_switch": true,
-        "cisco_nexus_port": true,
-        "cisco_nexus_l3_interface": true,
+        "cisco_networking_hsrp_group": true,
+        "cisco_networking_hsrp_group_member": true,
+        "cisco_networking_fan": true,
+        "cisco_networking_power_module": true,
+        "cisco_networking_sensor": true,
+        "cisco_networking_switch": true,
+        "cisco_networking_port": true,
+        "cisco_networking_l3_interface": true,
         "relationships": true,
         "notifications": "INFO" //Valid values: true, false, ERROR, WARNING, INFO, DEBUG
       }
