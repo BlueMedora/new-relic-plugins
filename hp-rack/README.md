@@ -32,16 +32,16 @@ Once the NPI tool has been installed, run the following command:
 
 ```
   ./npi install com.bluemedora.hp.rack
-``` 
+```
 
 **Note:** This command will take care of the creation of `newrelic.json` and `plugin.json` files described in the [Configuring the Plugin](#Configuring-the-Plugin) section.
 
-###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-hp-rack/newrelic_hp_rack_plugin-3.0.1_20170803_181638.tar.gz)
+###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-hp-rack/newrelic_hp_rack_plugin-3.0.2_20170824_184546.tar.gz)
 
 ----
-    
+
 ## Configuring the Plugin
-From the extracted plugin folder you receive when downloading your plugin, you will find the following files: 
+From the extracted plugin folder you receive when downloading your plugin, you will find the following files:
 
 ```
   plugin.jar
@@ -49,7 +49,7 @@ From the extracted plugin folder you receive when downloading your plugin, you w
   oss_attribution.txt
   [config folder]
     newrelic.template.json
-    plugin.template.json 
+    plugin.template.json
     plugin_license.json
 ```
 
@@ -70,9 +70,9 @@ Make a copy of this template and rename it to `newrelic.json`. Listed below are 
 }
 ```
 
-**Insights Configuration** - Blue Medora plugins support reporting events to New Relic Insights. 
-In order to achieve this you need to supply your `insights_api_key` and `insights_account_id`. 
-You can find these fields in on [your New Relic API Keys page](https://rpm.newrelic.com/apikeys). 
+**Insights Configuration** - Blue Medora plugins support reporting events to New Relic Insights.
+In order to achieve this you need to supply your `insights_api_key` and `insights_account_id`.
+You can find these fields in on [your New Relic API Keys page](https://rpm.newrelic.com/apikeys).
 For more information, [refer to the New Relic Insights documentation](https://docs.newrelic.com/docs/insights/new-relic-insights/adding-querying-data/insert-custom-events-insights-api#register).
 
 Below are the fields needed to configure Insights access.
@@ -135,7 +135,7 @@ Below are the fields needed to configure Insights access.
 }
 ```
 
-### Configuring the `plugin.template.json` file: 
+### Configuring the `plugin.template.json` file:
 
 The second file, `plugin.template.json`, contains data specific to each plugin (e.g., a list of hosts and port combinations for what you are monitoring). Templates for both of these files should be located in the ‘config’ directory in your extracted plugin folder.
 
@@ -187,7 +187,7 @@ If you see `FATAL ERROR: JS Allocation failed - process out of memory` during in
 ----
 
 ## Support Resources
-For questions or issues regarding the HP Rack Servers Plugin for New Relic, visit http://support.bluemedora.com. 
+For questions or issues regarding the HP Rack Servers Plugin for New Relic, visit http://support.bluemedora.com.
 
 ----     
 
