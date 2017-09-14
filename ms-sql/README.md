@@ -22,7 +22,16 @@ The MS SQL plugin connects to a MS SQL database via JDBC connection. Before inst
 - **A Blue Medora License.** A trial license will ship with the plugin that is valid for 14 days. To obtain a production license or get pricing information for the plugin, please contact sales@bluemedora.com.
 
 ----
+## Access Rights
+To set up the minimum user permissions needed for monitoring MSSQL, the following tasks must be completed. You should use your own credentials, user, and role names.
+1. Grant your Microsoft SQL Server login credentials the `VIEW ANY DEFINITION` and `VIEW SERVER STATE` permissions.
 
+2. Next, to ensure all future-created databases are monitored, create a user that maps your MS SQL credentials and has the **db_datareader** role on the following databases:
+-  each user database
+- `msdb` database
+- `model` database
+
+----
 ## Installing the Plugin
 
 We recommend using the New Relic Platform Installer for installing and running your Blue Medora plugins for New Relic.
