@@ -22,6 +22,42 @@ The Amazon DynamoDB plugin connects to a DynamoDB Region via account access keys
 
 ----
 
+## Access Rights
+For detailed information on creating and attaching policies within the AWS Management Console, refer to: <http://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_managed-policies.html>
+
+The following custom permissions policy must be attached to monitoring users:
+```
+	DynamoDB (Custom)
+		Source:
+ 			{
+ 				“Version”: “2012-10-17”,
+ 				“Statement”: [
+ 					{
+ 						“Effect”: “Allow”,
+						“Action”: [
+ 							“iam:GetUser”
+							],
+						“Resource”: “*”
+ 					}
+ 				]
+ 			}
+```
+
+The following predefined permissions policies must be attached to monitoring users:
+```
+CloudWatchEventsReadOnlyAccess
+
+AmazonDynamoDBReadOnlyAccess 
+
+CloudWatchLogsReadOnlyAccess
+
+AmazonDMSCloudWatchLogsRole 
+ 
+CloudWatchReadOnlyAccess
+```
+
+-----
+
 ## Installing the Plugin
 
 We recommend using the New Relic Platform Installer for installing and running your Blue Medora plugins for New Relic.
