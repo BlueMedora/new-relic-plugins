@@ -23,6 +23,11 @@ The VMware vSphere Plugin connects to VMware vSphere using the vSphere API. Befo
 
 ----
 
+## Access Rights
+A vSphere user must be created for the plugin to access the vSphere environment. At a minimum, the vSphere user must have **read access** in order for the VMware Home target to operate correctly.
+
+-----
+
 ## Installing the Plugin
 
 We recommend using the New Relic Platform Installer for installing and running your Blue Medora plugins for New Relic.
