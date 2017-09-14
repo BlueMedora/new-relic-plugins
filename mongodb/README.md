@@ -22,7 +22,24 @@ The MongoDB plugin collects data by connecting to the Java MongoDB Driver. Befor
 - **A Blue Medora License.** A trial license will ship with the plugin that is valid for 14 days. To obtain a production license or get pricing information for the plugin, please contact sales@bluemedora.com.
 
 ----
+## Access Rights
+**Connection information**
+- The plugin collects data from **MongoDB database** via the **Mongo Client**.
 
+- Your **MongoDB hostname** (or IP address) is required.
+A comma-seperated list of multiple hosts (mongos/mongod instances) in an environment is supported.
+
+- In addition, **if using a port other than the default of 27017**, you can append the non-standard port number to the hostname. 
+**NOTE:** Internet Protocol version 4 (IPv4) is supported for IP addresses.
+
+**User Privileges**
+- **MongoDB User Name/Password** for the admin database.
+
+- The **same User Name/Password** must exist for all mongos/mongods in your environment.
+
+- Ensure a least privileged MongoDB user account of **read-only**.
+
+-----
 ## Installing the Plugin
 
 We recommend using the New Relic Platform Installer for installing and running your Blue Medora plugins for New Relic.
