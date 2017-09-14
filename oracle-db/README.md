@@ -17,7 +17,7 @@ The Oracle Database plugin connects to a single Oracle Database Instance via a h
 
 **Oracle Database Plugin Requirements**
 
-- The plugin supports **Oracle Database Version 11.2+**
+- The plugin supports **Oracle Database Version 10.2+**
 - Java 1.7 or higher
 - **A Blue Medora License.** A trial license will ship with the plugin that is valid for 14 days. To obtain a production license or get pricing information for the plugin, please contact sales@bluemedora.com.
 
@@ -31,7 +31,7 @@ select on dba_free_space
 select on dba_outstanding_alerts
 select on dba_tablespaces
 select on dba_temp_files
-select on dba_temp_free_space
+select on dba_temp_free_space (Versions 11.2 and higher)
 select on dba_undo_extents
 select on global_name
 select on gv_$archive_dest

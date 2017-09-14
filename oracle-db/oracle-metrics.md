@@ -408,23 +408,23 @@
  - Oracle User Name
  - Schema Name
  - O/S Machine
- - Client Port
+ - Client Port (Versions 11.2 and higher)
  - O/S Client User Name
  - Application
  - Status
  - Blocking Session Status
  - Blocking Instance ID
  - Blocking Session ID
- - Final Blocking Session Status
- - Final Blocking Instance ID
- - Final Blocking Session ID
+ - Final Blocking Session Status (Versions 11.2 and higher)
+ - Final Blocking Instance ID (Versions 11.2 and higher)
+ - Final Blocking Session ID (Versions 11.2 and higher)
  - Lock Address
  - Wait State
  - Wait Event
  - Wait Time
- - Wait Time Remaining
- - Time Since Last Wait
- - SQL Execution Start Time
+ - Wait Time Remaining (Versions 11.2 and higher)
+ - Time Since Last Wait (Versions 11.2 and higher)
+ - SQL Execution Start Time (Versions 11.2 and higher)
  - SQL Text
  
 **Application**
