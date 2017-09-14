@@ -23,6 +23,13 @@ The Citrix NetScaler plugin connects to the Citrix NetScaler Appliance using RES
 
 ----
 
+## Access Rights
+A Citrix NetScaler User Name/Password is required to log in to the data source.
+
+**Least Privileged User Requirements:** In the NetScaler VPX user interface, you must create a user account for monitoring purposes (Configuration tab > System > User Administration > Users) that has a **System Command Policy** of **read-only**.
+
+----
+
 ## Installing the Plugin
 
 We recommend using the New Relic Platform Installer for installing and running your Blue Medora plugins for New Relic.
