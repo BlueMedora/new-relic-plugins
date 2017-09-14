@@ -8,7 +8,10 @@ This guide includes the proper installation and configuration needed to setup th
 
 ## System Requirements 
 
-The Apache Cassandra plugin connects to the Apache Cassandra database using JMX.
+The Apache Cassandra plugin connects to the Apache Cassandra database using a **remote JMX connection**.
+[Enabling remote JMX connection](<https://docs.datastax.com/en/cassandra/3.0/cassandra/configuration/secureJmxAuthentication.html>)
+
+------
 
 **New Relic Requirements**
 
