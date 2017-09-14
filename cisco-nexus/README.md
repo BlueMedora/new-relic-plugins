@@ -23,6 +23,17 @@ The Cisco Nexus plugin connects to the Cisco Nexus hardware (switch) using SNMP 
 
 ----
 
+## Access Rights
+The Plugin rquires one of the following credential types:
+
+- SNMP 2vc read-only community string
+- SNMP v3 User Name/Password
+- NX-API User Name/Password
+
+**Note:** The plugin requires a least privileged SNMP or NX-API user account of **read-only**.
+
+----
+
 ## Installing the Plugin
 
 We recommend using the New Relic Platform Installer for installing and running your Blue Medora plugins for New Relic.
