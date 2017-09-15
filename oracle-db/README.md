@@ -80,7 +80,7 @@ Once the NPI tool has been installed, run the following command:
 
 **Note:** This command will take care of the creation of `newrelic.json` and `plugin.json` files described in the [Configuring the Plugin](#Configuring-the-Plugin) section.
 
-###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-oracle-database/newrelic_oracle_database_plugin-2.1.10_20170818_174210.tar.gz)
+###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-oracle-database/newrelic_oracle_database_plugin-3.0.0_20170915_193856.tar.gz)
 
 ----
     
