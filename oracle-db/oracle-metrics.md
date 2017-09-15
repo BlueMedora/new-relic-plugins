@@ -60,7 +60,7 @@
  - Estimated Cache Hit
  - Estimated PGA Memory Over-Allocations
  
-**Memory Advice Entry**
+**Memory Advice Entry (Version 11.2 or higher)**
  - Memory Size Factor
  - Memory Size
  - Estimated DB_TIME
@@ -135,9 +135,12 @@
  - Active State
  - Blocked
  - Instance ID
- - Waits
- - Timeouts
- - Time Waited
+ - Foreground Waits (Versions 11.2 and higher)
+ - Total Waits
+ - Foreground Timeouts (Versions 11.2 and higher)
+ - Total Timeouts
+ - Foreground Time Waited (Versions 11.2 and higher)
+ - Total Time Waited
  - Instance ID
  - Sessions Count
  - Background Types
@@ -170,9 +173,12 @@
  - Max Read Time
  - Max Write Time
  - Instance ID
- - Latch Waits
- - Latch Timeouts
- - Latch Time Waited
+ - Foreground Latch Waits (Versions 11.2 and higher)
+ - Total Latch Waits
+ - Foreground Latch Timeouts (Versions 11.2 and higher)
+ - Total Latch Timeouts
+ - Foreground Latch Time Waited (Versions 11.2 and higher)
+ - Total Latch Time Waited
  - Instance ID
  - Parallel Max Servers Current Utilization
  - Parallel Max Servers Limit
@@ -421,7 +427,7 @@
  - Lock Address
  - Wait State
  - Wait Event
- - Wait Time
+ - Wait Time (Versions 11.2 and higher)
  - Wait Time Remaining (Versions 11.2 and higher)
  - Time Since Last Wait (Versions 11.2 and higher)
  - SQL Execution Start Time (Versions 11.2 and higher)

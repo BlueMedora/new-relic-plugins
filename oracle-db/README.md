@@ -54,8 +54,10 @@ select on v_$filestat
 select on v_$instance
 select on v_$log
 select on v_$logfile
+select on v_$memory_target_advice
 select on v_$parameter
 select on v_$recovery_area_usage
+select on v_$flash_recovery_area_usage (Version 10 only)
 select on v_$resource_limit
 select on v_$rman_backup_job_details
 select on v_$tempfile
