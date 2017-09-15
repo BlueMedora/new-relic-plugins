@@ -23,7 +23,46 @@ The MySQL plugin connects to a MySQL or MariaDB instance via JDBC connection. Be
 - **A Blue Medora License.** A trial license will ship with the plugin that is valid for 14 days. To obtain a production license or get pricing information for the plugin, please contact sales@bluemedora.com.
 
 ----
+## Access Rights
+In order to access and return certain metrics from your database, specific privileges must be granted to the designated MySQL user:
 
+- **Table and database I/O Metrics:**
+In order to access these metrics, enable the `EXECUTE` privilege. This applies to MySQL 5.7 only.
+
+- **Slave Replication Metrics:**
+In order to access these metrics, enable the `REPLICATION CLIENT` privilege.
+
+- **Instance Metrics:**
+In order to access these metrics, enable the `PROCESS` privilege. This grants access to the following metrics:
+```
+- Instance Adaptive Hash
+- Index
+- Buffer
+- Buffer Page I/O
+- Change Buffer
+- Compression
+- DDL
+- DML
+- File System
+- ICP
+- Index
+- Lock
+- Metadata
+- OS
+- Purge
+- Recovery
+- Server
+- Transaction
+- Tablespace
+```
+- **Query Metrics:**
+In order to access these metrics, ensure the `sys` schema is install. If it is not installed, run the following commands:
+
+These steps are based on the [mysql-sys](<https://github.com/mysql/mysql-sys>) repository.
+
+Shell commands to install `sys` schema found here: <https://docs.selectstar.io/docs/mysql>
+
+-------
 ## Installing the Plugin
 
 We recommend using the New Relic Platform Installer for installing and running your Blue Medora plugins for New Relic.

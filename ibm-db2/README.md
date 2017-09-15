@@ -23,6 +23,38 @@ The IBM DB2 Plugin connects to a DB2 database using a JDBC connection. Before in
 
 ----
 
+## Access Rights
+In order to access and return certain metrics from your database, specific privileges must be granted to the designated DB2 user:
+- Enable DB2 configuration parameter HEALTH_MON (i.e. turn on health indicators for instance and database objects).
+
+- Enable switch for monitoring statements.
+
+- Set up permissions for the monitoring user to query the lock waits administrative view.
+
+- Enable table monitoring (DFT\_MON\_TABLE) for the database you are monitoring. To complete the above configurations run the following commands by Command Line Processor (CLP) at the db2 prompt:
+```
+update dbm cfg using HEALTH_MON on
+update dbm cfg using DFT_MON_STMT on
+update dbm cfg using DFT_MON_LOCK on
+update dbm cfg using DFT_MON_TABLE on
+```
+To check if your changes are effective, run the following command: ```get dbm cfg```
+
+You should see the following output:
+```
+Monitor health of instance and databases (HEALTH_MON) = ON
+Default database monitor switches
+Buffer pool (DFT_MON_BUFPOOL) = OFF
+Lock (DFT_MON_LOCK) = ON
+Sort (DFT_MON_SORT) = OFF
+Statement (DFT_MON_STMT) = ON
+Table (DFT_MON_TABLE) = ON
+Timestamp (DFT_MON_TIMESTAMP) = ON
+Unit of work (DFT_MON_UOW) = OFF
+Monitor health of instance and databases (HEALTH_MON) = ON
+```
+-----
+
 ## Installing the Plugin
 
 We recommend using the New Relic Platform Installer for installing and running your Blue Medora plugins for New Relic.

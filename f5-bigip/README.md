@@ -23,6 +23,21 @@ The F5 BIG-IP plugin connects to the supported F5 BIG-IP System via a management
 
 ----
 
+## Access Rights
+F5 BIG-IP username/password with a **minimum of Auditor user role with iControl REST API access**.
+
+**Note:** To create a user with permissions to read REST, you must first create and Auditor user, then give the user REST permissions as described in the "About iControl and RBAC for user accounts" section of the iControl® REST User Guide, Version 11.6.
+
+**Note:** An F5 Administrator user role is required to collect the following metrics:
+```
+System: CPU Idle Ticks, CPU Usage Ticks: System, CPU Usage Ticks: User, Chassis Serial Number, Memory Total, Memory Used, Platform, Product 
+
+Device: syncState
+
+Device Group: all metrics and resources (device groups will not exist with Auditor role)
+```
+-----
+
 ## Installing the Plugin
 
 We recommend using the New Relic Platform Installer for installing and running your Blue Medora plugins for New Relic.

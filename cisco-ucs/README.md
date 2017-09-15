@@ -23,6 +23,14 @@ The Cisco UCS plugin collects data by making REST calls to the Cisco UCS Manager
 
 ----
 
+## Access Rights
+
+UCSM User Name/Password
+
+Note: If your UCSM credentials are for a Domain User, your credentials should follow the ucs-{LDAP source}\{LDAP username} format.
+
+-----
+
 ## Installing the Plugin
 
 We recommend using the New Relic Platform Installer for installing and running your Blue Medora plugins for New Relic.
