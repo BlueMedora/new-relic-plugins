@@ -62,6 +62,11 @@ select on v_$resource_limit
 select on v_$rman_backup_job_details
 select on v_$tempfile
 select on v_$version
+select on v$db_cache_advice
+select on v$memory_target_advice
+select on v$pga_target_advice
+select on v$sga_target_advice
+select on v$shared_pool_advice
 ```
 
 ----
