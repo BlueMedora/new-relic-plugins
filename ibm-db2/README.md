@@ -37,6 +37,7 @@ update dbm cfg using HEALTH_MON on
 update dbm cfg using DFT_MON_STMT on
 update dbm cfg using DFT_MON_LOCK on
 update dbm cfg using DFT_MON_TABLE on
+update dbm cfg using DFT_MON_BUFPOOL on
 ```
 To check if your changes are effective, run the following command: ```get dbm cfg```
 
