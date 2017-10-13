@@ -97,7 +97,7 @@
 ## Query
 | Metric Name | Insights Key | Description |
 | ----------- | ------------ | :---------- |
-| Average Execution Time | avg_execution_time | The average execution time for the query |
+| Average Execution Time | average_execution_time | The average execution time for the query |
 | Database ID | database_id | Database identification number (unique within the Azure SQL Database server) |
 | Database Name | database_name | Name of the database |
 | Execution Context Name | execution_context_name | The name of the context in which the query was executed |
