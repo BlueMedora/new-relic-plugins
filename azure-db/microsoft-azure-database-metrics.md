@@ -61,6 +61,29 @@
 | Write Delay | write_delay | Total time, in milliseconds, that users waited for writes to be completed on files for the database* |
 | Write Operations | write_ops | This metrice represents the amount of disk write operations over time.* |
 
+## Elastic Pool
+| Metric Name | Insights Key | Description |
+| ----------- | ------------ | :---------- |
+| CPU Usage | cpu_usage | Percentage of CPU in use by the Elastic Pool. |
+| DTU Consumption | dtu_consumption | Percentage of Database Transaction Units consumed by the Elastic Pool. |
+| Data IO | data_io | Physical data read percentage of the Elastic Pool. |
+| Database Count | database_count | Number of databases used by the Elastic Pool. |
+| In-Memory OLTP Storage | xtp_storage | Percentage of in-memory Online Transaction Processing storage in use by the Elastic Pool |
+| Log IO | log_io | Log write percentage of the Elastic Pool. |
+| Maximum Database DTU | max_database_dtu | Maximum observed Database Transaction Unit of the Elastic Pool. |
+| Minimum Database DTU | min_database_dtu | Minimum observed Database Transaction Unit of the Elastic Pool. |
+| Name | name | Name of the Elastic Pool. |
+| SQL Server Name | server | Name of the SQL Server which is hosting the Elastic Pool. |
+| Sessions | sessions | Percentage of concurrent sessions in use. The maximum is determined by the service tier. |
+| State | state | Current state of the Elastic Pool. |
+| Storage | storage | Storage size, in megabytes, of the Elastic Pool. |
+| Storage Limit | storage_limit | Storage limit, in bytes, of the Elastic Pool. |
+| Storage Usage | storage_usage | Percentage of storage in use by the Elastic Pool. |
+| Storage Used | storage_used | Storage used, in bytes, by the Elastic Pool. |
+| Workers | workers | Percentage of concurrent workers (requests) which are running. The maximum is determined by the service tier. |
+| eDTU Limit | edtu_limit | Elastic Database Transaction Unit limit for the Elastic Pool. |
+| eDTU Used | edtu_used | Elastic Database Transaction Units used by the Elastic Pool. |
+
 ## Geo-Replication Database
 | Metric Name | Insights Key | Description |
 | ----------- | ------------ | :---------- |
@@ -112,6 +135,11 @@
 | Statement Start Offset | statement_start_offset | Indicates, in bytes, beginning with 0, the starting position of the query that the row describes within the text of its batch or persisted object |
 | Unique Query Plans | unique_plans | The number of unique plans for this query |
 
+## Resource Group
+| Metric Name | Insights Key | Description |
+| ----------- | ------------ | :---------- |
+| Name | name | Name of the Resource Group. |
+
 ## Server
 | Metric Name | Insights Key | Description |
 | ----------- | ------------ | :---------- |
@@ -119,5 +147,65 @@
 | Name | name | Logical server name |
 | SQL Version | sql_version | Azure SQL Version |
 | Type | type | Is the server configured in a failover cluster |
+
+## SQL Data Warehouse
+| Metric Name | Insights Key | Description |
+| ----------- | ------------ | :---------- |
+| CPU Usage | cpu_usage | Percentage of CPU in use by the SQL Data Warehouse. |
+| Connections Blocked by Firewall | blocked_by_firewall | Number of connections to the SQL Data Warehouse which are blocked by the firewall. |
+| Current Service Level Objective | service_level_objective_dw | Current service level objective of the SQL Data Warehouse. |
+| DWU Consumption | dwu_consumption | Percentage of Data Warehouse Units consumed by the SQL Data Warehouse. |
+| DWU Limit | dwu_limit | Data Warehouse Units limit of the SQL Data Warehouse. |
+| DWU Used | dwu_used | Data Warehouse Units used by the SQL Data Warehouse. |
+| Data IO | data_io | Physical data read percentage of the SQL Data Warehouse. |
+| Failed Connections | failed_connections | Number of failed connections to the SQL Data Warehouse. |
+| Name | name | Name of the SQL Data Warehouse |
+| SQL Server Name | server | Name of the SQL Server hosting the SQL Data Warehouse. |
+| Service Level Objective | service_level_objective | Service level objective of the SQL Database. |
+| Status | status | Status of the SQL Database. |
+| Successful Connections | successful_connections | Number of successful connections to the SQL Data Warehouse. |
+| Total Database Size | database_size | The total size, in bytes, of the SQL Data Warehouse. |
+
+## SQL Database
+| Metric Name | Insights Key | Description |
+| ----------- | ------------ | :---------- |
+| Active Time Ratio | active_time_ratio | Ratio of time the SQL Database is active. |
+| Average DTU | average_dtu | Average observed Database Transaction Units of the SQL Database. |
+| CPU Usage | cpu_usage | Percentage of CPU in use by the SQL Database. |
+| Connections Blocked by Firewall | blocked_by_firewall | Number of attempted connections to the SQL Database which were blocked by the firewall. |
+| Current Service Level Objective | service_level_objective | Current service level objective of the SQL Database. |
+| DTU Consumption | dtu_consumption | Percentage of Database Transaction Units consumed by the SQL Database. |
+| DTU Limit | dtu_limit | Database Transaction Unit limit of the SQL Database. |
+| DTU Used | dtu_used | Database Transaction Units used by the SQL Database. |
+| Data IO | data_io | Physical data read percentage of the SQL Database. |
+| Database Size Usage | database_size_usage | Percentage of storage being used by the SQL Database. |
+| Deadlocks | deadlocks | Number of deadlocks in the SQL Database. |
+| Failed Connections | failed_connections | Number of failed connections to the SQL Database. |
+| In-Memory OLTP Storage | xtp_storage | Percentage of In-Memory Online Transaction Processing storage in use by the SQL Database |
+| Log IO | log_io | Log write percentage of the SQL Database. |
+| Max Database Size | max_database_size | Maximum size, in gigabytes, of the SQL Database. |
+| Maximum DTU | max_dtu | Maximum observed Database Transaction Units of the SQL Database. |
+| Minimum DTU | min_dtu | Minimum observed Database Transaction Units of the SQL Database. |
+| Name | name | Name of the SQL Database. |
+| SQL Server Name | server | Name of the SQL Server on which the SQL Database is hosted. |
+| Service Tier Name | service_tier_name | Name of the current service tier of the SQL Database. |
+| Sessions | sessions | Percentage of concurrent sessions in use. The maximum is determined by the service tier. |
+| Status | status | Current status of the SQL Database. |
+| Successful Connections | successful_connections | Number of successful connections to the SQL Database. |
+| Total Database Size | database_size | Total size, in bytes, of the SQL Database. |
+| Workers | workers | Percentage of concurrent workers (requests) which are running. The maximum is determined by the service tier. |
+
+## SQL Server
+| Metric Name | Insights Key | Description |
+| ----------- | ------------ | :---------- |
+| Average CPU Usage | cpu_usage | Average CPU usage by databases on the SQL Server. |
+| Average Concurrent Sessions | sessions | Percentage of concurrent sessions in use. The maximum is determined by the service tier. |
+| Average Concurrent Workers | workers | Percentage of concurrent workers (requests) which are running. The maximum is determined by the service tier. |
+| Average DTUs Used | dtu_used | Average Database Transaction Units used by databases on the SQL Server. |
+| Average Data IO | data_io | Average physical data read percentage of databases on the SQL Server. |
+| Average Database Size | database_size | Average size in bytes of databases on the SQL Server. |
+| Average In-Memory OLTP Storage | xtp_storage | Average percentage of In-Memory Online Transaction Processing storage in use by databases on the SQL Server. |
+| Average Log IO | log_io | Average log write percentage of databases on the SQL Server. |
+| Name | name | Name of the SQL Server. |
 
 ### * Metric Value Since Last Collection
