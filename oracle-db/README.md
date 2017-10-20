@@ -310,9 +310,10 @@ For questions or issues regarding the Oracle Database Plugin for New Relic, visi
 
 | Metric Name  |  Description |
 |:------------- |:-------------|
-| Instance Waits (waits/sec) |  The number of waits per second on the instance |
+| Instance Waits (%) |  The number of waits per second on the instance |
 | Instance Sessions (sessions) |  Inactive, Killed, No Wait, Sniped, Unblocked, Waiting, Active, Blocked, and Cached sessions on the instance |
-| Instance CPU Usage (centiseconds/sec) | CPU usage of an instance |
+| Instance CPU Usage (%) | CPU usage of an instance |
+| Instance CPU Rates (centiseconds/sec) | CPU usage of an instance as a rate |
 | Tablespace Size (GB) | Size across tablespaces |
 | Query Execution Time (sec/minute) | The number of seconds every minute that a query takes to execute |
 | Query Wait Time (ms/minute) | The number of milliseconds every minute that a query spends waiting |
@@ -324,8 +325,9 @@ For questions or issues regarding the Oracle Database Plugin for New Relic, visi
 | Metric Name  |  Description |
 |:------------- |:-------------|
 | Waits (waits/sec) |  The number of waits per second on the instance |
-| Time Waited (sec/minute) | The number of seconds every minute that the instance is spent waiting  |
-| CPU Usage (centiseconds/sec) | CPU usage of an instance |
+| Time Waited (%) | The number of seconds every minute that the instance is spent waiting  |
+| CPU Usage (%) | CPU usage of an instance |
+| CPU Rates (centiseconds/sec) | CPU usage of an instance as a rate |
 | Sessions (sessions) |  Inactive, Killed, No Wait, Sniped, Unblocked, Waiting, Active, Blocked, and Cached sessions on the instance |
 | Cache Hit Ratio (%) | The hit precentage of instance on the cache  |
 | Cache Size (GB) | The size of the instance cache  |
@@ -338,18 +340,7 @@ For questions or issues regarding the Oracle Database Plugin for New Relic, visi
 |:------------- |:-------------|
 | Size (GB)  | Size across tablespaces |
 | Free Space (GB)  | Free Space available across tablespaces |
-
-**Database Files**
-
-| Metric Name  |  Description |
-|:------------- |:-------------|
-| Size (GB)  | Size across database files |
-| Max Size (GB)  | Max size allowed across database files |
-| IO Time (ms)  | Time taken for IO operations |
-| Read Time (ms/minute) | The number of milliseconds every minute across database files spent reading |
-| Write Time (ms/minute) | The number of milliseconds every minute across database files spent writing |
-| Reads (reads/sec) | The read rate across database files |
-| Write (writes/sec) | The write rate across database files |
+| Space Used (%)  | Space as a percentage across all tablespaces |
 
 **Queries**
 
