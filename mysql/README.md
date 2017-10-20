@@ -18,7 +18,7 @@ The MySQL plugin connects to a MySQL or MariaDB instance via JDBC connection. Be
 **MySQL Plugin Requirements**
 
 - **MySQL and Maria DB versions.** The plugin is compatible with MySQL versions 5.6+ and MariaDB versions 10.0 and 10.1.
-- For MySQL versions prior to 5.7.7 the `sys` schema must be installed before installing the plugin in order to collect query information 
+- For MySQL versions prior to 5.7.7 and ALL MariaDB versions the `sys` schema must be installed before installing the plugin in order to collect query information 
 - Java 1.7 or higher
 - **A Blue Medora License.** A trial license will ship with the plugin that is valid for 14 days. To obtain a production license or get pricing information for the plugin, please contact sales@bluemedora.com.
 
@@ -69,7 +69,7 @@ We recommend using the New Relic Platform Installer for installing and running y
 
 The New Relic Platform Installer (NPI) is a command line tool that helps you easily download, configure, and manage New Relic Platform Plugins.  For more information, refer to the [Installing an NPI-compatible plugin documentation](https://docs.newrelic.com/docs/plugins/plugins-new-relic/installing-plugins/installing-npi-compatible-plugin).
 
-Once the NPI tool has been installed, run the following command:
+Once the NPI tool has been installed, run the following command:https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-mysql/newrelic_mysql_plugin-3.1.0_20171020_143738.tar.gz
 
 ```
   ./npi install com.bluemedora.mysql
@@ -323,7 +323,7 @@ For questions or issues regarding the MySQL Plugin for New Relic, visit http://s
 | Spin Waits (waits/minutes) | The number of spin waits per minutes across the MySQL instance |
 | Waits (waits/minutes) | The number of miscellaneous waits per minutes across the MySQL instance |
 
-**Tablespaces**
+**Tablespaces (MySQL Only)**
 
 | Metric Name  |  Description |
 |:------------- |:-------------|
