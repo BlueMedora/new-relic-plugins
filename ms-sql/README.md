@@ -18,7 +18,7 @@ The MS SQL plugin connects to a MS SQL database via JDBC connection. Before inst
 **MS SQL Plugin Requirements**
 
 - **MS SQL versions.** The plugin is compatible with MS SQL 2008 R2, 2012, & 2014.
-- Java 1.7 or higher
+- Java 1.8 or higher
 - **A Blue Medora License.** A trial license will ship with the plugin that is valid for 14 days. To obtain a production license or get pricing information for the plugin, please contact sales@bluemedora.com.
 
 ----
