@@ -36,7 +36,7 @@ Once the NPI tool has been installed, run the following command:
 
 **NOTE:** This command will take care of the creation of `newrelic.json` and `plugin.json` files described in the [Configuring the Plugin](#Configuring-the-Plugin) section.
 
-###### [Download Plugin for Manual Installation]()
+###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-microsoft-azure-database/newrelic_microsoft_azure_database_plugin-1.0.0_20171103_170938.tar.gz)
 
 ----     
 
