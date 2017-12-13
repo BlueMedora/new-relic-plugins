@@ -1,7 +1,7 @@
 # New Relic Plugin for PostgreSQL
 
 The **Blue Medora New Relic Plugin for PostgreSQL** allows you to monitor your PostgreSQL performance data from within the New Relic platform by pulling metrics in from the system and displaying them in a set of intuitive, graph-based monitoring dashboards.
-				
+
 This guide includes instructions for installing and configuring the Blue Medora New Relic Plugin for PostgreSQL.
 If you’re having a bad experience with one of our plugins, please get in touch and we’ll be happy to help you out.
 
@@ -26,7 +26,7 @@ The PostgreSQL plugin connects to the supported PostgreSQL instance via a host o
 To track queries, these settings need to be added to the `postgresql.conf` `shared_preload_libraries` settings:
 
 ```
-shared_preload_libraries = ‘pg_stat_statements' 
+shared_preload_libraries = ‘pg_stat_statements'
 pg_stat_statements.max = 10000
 pg_stat_statements.track = all
 ```
@@ -55,16 +55,16 @@ Once the NPI tool has been installed, run the following command:
 
 ```
   ./npi install com.bluemedora.Postgres
-``` 
+```
 
 **Note:** This command will take care of the creation of `newrelic.json` and `plugin.json` files described in the [Configuring the Plugin](#Configuring-the-Plugin) section.
 
-###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-postgres/newrelic_Postgres_plugin-2.1.3_20170712_165720.tar.gz) 
+###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-postgres/newrelic_Postgres_plugin-3.0.0_20171213_152652.tar.gz) 
 
 ----
-    
+
 ## Configuring the Plugin
-From the extracted plugin folder you receive when downloading your plugin, you will find the following files: 
+From the extracted plugin folder you receive when downloading your plugin, you will find the following files:
 
 ```
   plugin.jar
@@ -72,7 +72,7 @@ From the extracted plugin folder you receive when downloading your plugin, you w
   oss_attribution.txt
   [config folder]
     newrelic.template.json
-    plugin.template.json 
+    plugin.template.json
     plugin_license.json
 ```
 
@@ -93,9 +93,9 @@ Make a copy of this template and rename it to `newrelic.json`. Listed below are 
 }
 ```
 
-**Insights Configuration** - Blue Medora plugins support reporting events to New Relic Insights. 
-In order to achieve this you need to supply your `insights_api_key` and `insights_account_id`. 
-You can find these fields in on [your New Relic API Keys page](https://rpm.newrelic.com/apikeys). 
+**Insights Configuration** - Blue Medora plugins support reporting events to New Relic Insights.
+In order to achieve this you need to supply your `insights_api_key` and `insights_account_id`.
+You can find these fields in on [your New Relic API Keys page](https://rpm.newrelic.com/apikeys).
 For more information, [refer to the New Relic Insights documentation](https://docs.newrelic.com/docs/insights/new-relic-insights/adding-querying-data/insert-custom-events-insights-api#register).
 
 Below are the fields needed to configure Insights access.
@@ -158,7 +158,7 @@ Below are the fields needed to configure Insights access.
 }
 ```
 
-### Configuring the `plugin.template.json` file: 
+### Configuring the `plugin.template.json` file:
 
 The second file, `plugin.template.json`, contains data specific to each plugin (e.g., a list of hosts and port combinations for what you are monitoring). Templates for both of these files should be located in the ‘config’ directory in your extracted plugin folder.
 
@@ -230,11 +230,11 @@ Make a copy of this template and rename it to `plugin.json`. Shown below is an e
         "postgresql_index": true,
         "postgresql_table": true,
         "postgresql_tablespace": true,
-        "postgresql_configuration": true, 
-        "postgresql_trigger": true, 
+        "postgresql_configuration": true,
+        "postgresql_trigger": true,
         "postgresql_replication": true,
-        "postgresql_sequence": true, 
-        "postgresql_session": true, 
+        "postgresql_sequence": true,
+        "postgresql_session": true,
         "relationships": true,
         "notifications": "INFO"
       }
@@ -268,12 +268,12 @@ When running a plugin, a `java.lang.OutOfMemoryError` may occur if too much data
 If you see `FATAL ERROR: JS Allocation failed - process out of memory` during installation, edit newrelic-npi/npi replacing `bin/node npi.js "$@"` with `bin/node --max-old-space-size=4096 npi.js "$@" #modified for 4gb memory`
 
 ----
-    
+
 ## Support Resources
-For questions or issues regarding the PostgreSQL Plugin for New Relic, visit http://support.bluemedora.com. 
+For questions or issues regarding the PostgreSQL Plugin for New Relic, visit http://support.bluemedora.com.
 
 ----
-    
+
 ## Metrics Source Documentation
 
 **System Overview**
