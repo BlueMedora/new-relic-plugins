@@ -1,12 +1,12 @@
 # New Relic Plugin for Apache Cassandra
 
-The **Blue Medora Apache Cassandra Plugin for New Relic** allows you to monitor your Cassandra databases within the New Relic platform by collecting metrics from the system and displaying them in an arrangement of intuitive, graphical based monitoring dashboards. 
+The **Blue Medora Apache Cassandra Plugin for New Relic** allows you to monitor your Cassandra databases within the New Relic platform by collecting metrics from the system and displaying them in an arrangement of intuitive, graphical based monitoring dashboards.
 
-This guide includes the proper installation and configuration needed to setup the Blue Medora Apache Cassandra Plugin for New Relic. 
+This guide includes the proper installation and configuration needed to setup the Blue Medora Apache Cassandra Plugin for New Relic.
 
 ----
 
-## System Requirements 
+## System Requirements
 
 The Apache Cassandra plugin connects to the Apache Cassandra database using a **remote JMX connection**.
 [Enabling remote JMX connection](<https://docs.datastax.com/en/cassandra/3.0/cassandra/configuration/secureJmxAuthentication.html>)
@@ -15,7 +15,7 @@ The Apache Cassandra plugin connects to the Apache Cassandra database using a **
 
 **New Relic Requirements**
 
-- A New Relic account. (Sign up for a free account [here](https://newrelic.com/signup/). 
+- A New Relic account. (Sign up for a free account [here](https://newrelic.com/signup/).
 
 **Apache Cassandra Plugin Requirements**
 
@@ -24,13 +24,13 @@ The Apache Cassandra plugin connects to the Apache Cassandra database using a **
 - **A Blue Medora License.** A trial license will ship with the plugin that is valid for 14 days. To obtain a production license or get pricing information for the plugin, please contact <sales@bluemedora.com>.
 
 
-## Installing the Plugin 
+## Installing the Plugin
 
-We recommend using the New Relic Platform Installer for installing and running your Blue Medora plugins for New Relic. 
- 
+We recommend using the New Relic Platform Installer for installing and running your Blue Medora plugins for New Relic.
+
 The New Relic Platform Installer (NPI) is a command line tool that helps you easily download, configure, and manage New Relic Platform Plugins. For more information, please refer to the [Installing an NPI-compatible plugin documentation](https://docs.newrelic.com/docs/plugins/plugins-new-relic/installing-plugins/installing-npi-compatible-plugin).
 
-Once the NPI tool has been installed, run the following command: 
+Once the NPI tool has been installed, run the following command:
 
 ```
 	./npi install com.bluemedora.apache.cassandra
@@ -38,13 +38,13 @@ Once the NPI tool has been installed, run the following command:
 
 **Note:** This command will take care of the creation of `newrelic.json` and `plugin.json` files described in the [Configuring the Plugin](#Configuring-the-Plugin) section.
 
-###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-apache-cassandra/newrelic_apache_cassandra_plugin-1.0.4_20170721_130118.tar.gz)
+###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-apache-cassandra/newrelic_apache_cassandra_plugin-1.0.5_20180109_192315.tar.gz)
 
 ----     
 
-## Configuring the Plugin 
+## Configuring the Plugin
 
-From the extracted plugin folder you will receive when downloading your plugin, you will find the following files 
+From the extracted plugin folder you will receive when downloading your plugin, you will find the following files
 
 ```
  	plugin.jar
@@ -52,33 +52,33 @@ From the extracted plugin folder you will receive when downloading your plugin, 
   	oss_attribution.txt
   	[config folder]
     	newrelic.template.json
-    	plugin.template.json 
+    	plugin.template.json
     	plugin_license.json
 ```
-    
-   
+
+
 The "template" .json files found in the config folder must be modified (i.e., customized) and renamed prior to setting up the plugin for monitoring.
 
-## Configuring the `newrelic.template.json` file 
+## Configuring the `newrelic.template.json` file
 
-The first file, `newrelic.template.json`, contains configurations used by all Platform plugins (e.g., license key, logging information, proxy settings) and can be shared across your plugins. 
+The first file, `newrelic.template.json`, contains configurations used by all Platform plugins (e.g., license key, logging information, proxy settings) and can be shared across your plugins.
 Make a copy of this template and rename it to `newrelic.json`. Listed below are the configurable fields within the newrelic.json file:
 
-**New Relic License Key** - The only requried field in the `newrelic.json` file is the License Key. This unique identifier informs New Relic about the specific account tied to the plugin. For more information on the License Key, [refer to the New Relic License key documentation](https://docs.newrelic.com/docs/accounts-partnerships/accounts/account-setup/license-key). 
+**New Relic License Key** - The only requried field in the `newrelic.json` file is the License Key. This unique identifier informs New Relic about the specific account tied to the plugin. For more information on the License Key, [refer to the New Relic License key documentation](https://docs.newrelic.com/docs/accounts-partnerships/accounts/account-setup/license-key).
 
 
 **Example:**
 
-``` 
+```
 {
 	"license_key": "YOUR LICENSE KEY" 	
-} 
+}
 
 ```
 
-**Insights Configuration** - Blue Medora plugins support reporting events to New Relic Insights. 
-In order to achieve this you need to supply your `insights_api_key` and `insights_account_id`. 
-You can find these fields in on [your New Relic API Keys page](https://rpm.newrelic.com/apikeys). 
+**Insights Configuration** - Blue Medora plugins support reporting events to New Relic Insights.
+In order to achieve this you need to supply your `insights_api_key` and `insights_account_id`.
+You can find these fields in on [your New Relic API Keys page](https://rpm.newrelic.com/apikeys).
 For more information, [refer to the New Relic Insights documentation](https://docs.newrelic.com/docs/insights/new-relic-insights/adding-querying-data/insert-custom-events-insights-api#register).
 
 Below are the fields needed to configure Insights access.
@@ -141,7 +141,7 @@ Below are the fields needed to configure Insights access.
 }
 ```
 
-### Configuring the `plugin.template.json` file: 
+### Configuring the `plugin.template.json` file:
 
 The second file, `plugin.template.json`, contains data specific to each plugin (e.g., a list of hosts and port combinations for what you are monitoring). Templates for both of these files should be located in the `config` directory in your extracted plugin folder.
 
@@ -166,7 +166,7 @@ Make a copy of this template and rename it to `plugin.json`. Shown below is an e
 ```
 {
   "polling_interval_seconds": 60,
-  "downtime_tracking_minutes": 60, 
+  "downtime_tracking_minutes": 60,
   "agents": [
     {
       "instance_name": "your_value_here",
@@ -224,7 +224,7 @@ If you see `FATAL ERROR: JS Allocation failed - process out of memory` during in
 ----
 
 ## Support Resources
-For questions or issues regarding the Apache Cassandra Plugin for New Relic, visit http://support.bluemedora.com. 
+For questions or issues regarding the Apache Cassandra Plugin for New Relic, visit http://support.bluemedora.com.
 
 ----
 
