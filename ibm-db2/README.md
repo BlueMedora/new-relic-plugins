@@ -73,7 +73,7 @@ Once the NPI tool has been installed, run the following command:
 ###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-ibm-db2/newrelic_ibm_db2_plugin-2.3.0_20180221_185201.tar.gz)
 
 ----
-    
+
 ## Configuring the Plugin
 From the extracted plugin folder you receive when downloading your plugin, you will find the following files:
 
@@ -187,7 +187,7 @@ Make a copy of this template and rename it to `plugin.json`. Shown below is an e
 | host | The hostname or ip address of DB2 instance |
 | port | Port to connect to DB2 instance |
 | database_name | Name of DB2 database to monitor |
-| strict_metric_names | Cleans the full metric names for New Relic Plugins to be below 250 characters, and only allows commas(,), underscores(_), brackets([]), forward slash (/), and colon (:). All other characters will simply be removed. |
+| strict_metric_names | Cleans the full metric names for New Relic Plugins to be below 250 characters, and only allows commas (,), underscores (_), brackets ([]), forward slash (/), and colon (:). All other characters will simply be removed. |
 | send_to_plugin | Indicates whether or not to send data to New Relic Plugins. See [Blue Medora's New Relic Knobs and Levers Readme](https://github.com/BlueMedora/new-relic-plugins/blob/master/configuration-variants/readme.md) for more details |
 | send_to_insights | Indicates whether or not to send data to New Relic Insights. See [Blue Medora's New Relic Knobs and Levers Readme](https://github.com/BlueMedora/new-relic-plugins/blob/master/configuration-variants/readme.md) for more details |
 
