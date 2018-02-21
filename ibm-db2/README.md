@@ -66,16 +66,16 @@ Once the NPI tool has been installed, run the following command:
 
 ```
 	./npi install com.bluemedora.ibm.db2
-```	
+```
 
 **Note:** This command will take care of the creation of `newrelic.json` and `plugin.json` files described in the [Configuring the Plugin](#Configuring-the-Plugin) section.
 
-###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-ibm-db2/newrelic_ibm_db2_plugin-2.2.0_20170727_135346.tar.gz)
+###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-ibm-db2/newrelic_ibm_db2_plugin-2.3.0_20180221_185201.tar.gz)
 
 ----
     
 ## Configuring the Plugin
-From the extracted plugin folder you receive when downloading your plugin, you will find the following files: 
+From the extracted plugin folder you receive when downloading your plugin, you will find the following files:
 
 ```
   plugin.jar
@@ -83,7 +83,7 @@ From the extracted plugin folder you receive when downloading your plugin, you w
   oss_attribution.txt
   [config folder]
     newrelic.template.json
-    plugin.template.json 
+    plugin.template.json
     plugin_license.json
 ```
 
@@ -104,9 +104,9 @@ Make a copy of this template and rename it to `newrelic.json`. Listed below are 
 }
 ```
 
-**Insights Configuration** - Blue Medora plugins support reporting events to New Relic Insights. 
-In order to achieve this you need to supply your `insights_api_key` and `insights_account_id`. 
-You can find these fields in on [your New Relic API Keys page](https://rpm.newrelic.com/apikeys). 
+**Insights Configuration** - Blue Medora plugins support reporting events to New Relic Insights.
+In order to achieve this you need to supply your `insights_api_key` and `insights_account_id`.
+You can find these fields in on [your New Relic API Keys page](https://rpm.newrelic.com/apikeys).
 For more information, [refer to the New Relic Insights documentation](https://docs.newrelic.com/docs/insights/new-relic-insights/adding-querying-data/insert-custom-events-insights-api#register).
 
 Below are the fields needed to configure Insights access.
@@ -169,7 +169,7 @@ Below are the fields needed to configure Insights access.
 }
 ```
 
-### Configuring the `plugin.template.json` file: 
+### Configuring the `plugin.template.json` file:
 
 The second file, `plugin.template.json`, contains data specific to each plugin (e.g., a list of hosts and port combinations for what you are monitoring). Templates for both of these files should be located in the ‘config’ directory in your extracted plugin folder.
 
@@ -187,6 +187,7 @@ Make a copy of this template and rename it to `plugin.json`. Shown below is an e
 | host | The hostname or ip address of DB2 instance |
 | port | Port to connect to DB2 instance |
 | database_name | Name of DB2 database to monitor |
+| strict_metric_names | Cleans the full metric names for New Relic Plugins to be below 250 characters, and only allows commas(,), underscores(_), brackets([]), forward slash (/), and colon (:). All other characters will simply be removed. |
 | send_to_plugin | Indicates whether or not to send data to New Relic Plugins. See [Blue Medora's New Relic Knobs and Levers Readme](https://github.com/BlueMedora/new-relic-plugins/blob/master/configuration-variants/readme.md) for more details |
 | send_to_insights | Indicates whether or not to send data to New Relic Insights. See [Blue Medora's New Relic Knobs and Levers Readme](https://github.com/BlueMedora/new-relic-plugins/blob/master/configuration-variants/readme.md) for more details |
 
@@ -204,6 +205,7 @@ Make a copy of this template and rename it to `plugin.json`. Shown below is an e
       "password": "your_value_here",
       "port": 50000,
       "host": "your_value_here",
+			"strict_metric_names": true,
       "database_name": "your_value_here",
       "send_to_plugin": {
         "db2_bufferpool": true,
@@ -254,7 +256,7 @@ If you see `FATAL ERROR: JS Allocation failed - process out of memory` during in
 ----
 
 ## Support Resources
-For questions or issues regarding the Blue Medora IBM DB2 plugin for New Relic, visit http://support.bluemedora.com. 
+For questions or issues regarding the Blue Medora IBM DB2 plugin for New Relic, visit http://support.bluemedora.com.
 
 ----     
 
@@ -368,4 +370,4 @@ For questions or issues regarding the Blue Medora IBM DB2 plugin for New Relic, 
 | Average Buffer Pool Hit Ratio (%) | The average hit ratio across all buffer pools on the instance |
 | Total Connections (connections) | The total number of connections to the instance |
 | Total Deadlocks (deadlocks/minute) | The total number of deadlocks per minutes on the instance |
-| Total Active Applications | The total number of Active Applications across all db2 Databases | 
+| Total Active Applications | The total number of Active Applications across all db2 Databases |
