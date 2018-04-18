@@ -59,7 +59,7 @@ Once the NPI tool has been installed, run the following command:
 
 **Note:** This command will take care of the creation of `newrelic.json` and `plugin.json` files described in the [Configuring the Plugin](#Configuring-the-Plugin) section.
 
-###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-postgres/newrelic_Postgres_plugin-3.1.0_20180316_162759.tar.gz) 
+###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-postgres/newrelic_Postgres_plugin-4.0.0_20180418_192603.tar.gz)
 
 ----
 
@@ -179,7 +179,7 @@ Make a copy of this template and rename it to `plugin.json`. Shown below is an e
 | password | Password for PostgreSQL login. |
 | host | IP address or hostname of PostgreSQL instance. |
 | database | Optional parameter, comma separated list of databases to monitor. When this field is omitted from `plugin.json`, the plugin will auto-discover all databases on the system. |
-| ssl_mode | Indicates if you wish to connect while using ssl. Acceptable values are `disable`, `verify-full`, `verify-ca`, or `require`. |
+| ssl_config | Indicates if you wish to connect while using ssl. Acceptable values are `No SSL`, `No Verify`, or `Verify`. |
 | port | Port used to connect to the PostgreSQL instance. Default is `5432`. |
 | show_query_text | Optional parameter, shows query text. If false, this field will default to the SQL ID. |
 | query_count | Optional parameter, the number of queries to return for "Top X Queries" metrics |
@@ -204,7 +204,7 @@ Make a copy of this template and rename it to `plugin.json`. Shown below is an e
       "password": "your_value_here",
       "host": "your_value_here",
       "database": "database1",
-      "ssl_mode": "disable",
+      "ssl_config": "No SSL",
       "port": 5432,
       "show_query_text": true,
       "query_count": "your_value_here",
