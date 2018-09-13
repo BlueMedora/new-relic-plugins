@@ -44,9 +44,17 @@ Once the NPI tool has been installed, run the following command:
   ./npi install com.bluemedora.microsoft.sqlserver
 ```
 
+Now complete the following steps with root permissions:
+1) `service newrelic_plugin_com.bluemedora.microsoft.sqlserver stop`
+1) `vi /etc/rc.d/init.d/newrelic_plugin_com.bluemedora.microsoft.sqlserver`
+1) Change line that starts with `sudo -u root java` to be `sudo -u root java -Xmx1024m "-Dnewrelic.platform.config.dir=$DAEMONDIR/config" -cp "$DAEMONDIR/jtds-1.1-v20140512.jar:$DAEMONDIR/plugin.jar:." com.bluemedora.newrelic.Main >> $DAEMONDIR/daemon.log 2>&1 &`
+1) Save and exit
+1) `systemctl daemon-reload`
+1) `service newrelic_plugin_com.bluemedora.microsoft.sqlserver start`
+
 **Note:** This command will take care of the creation of `newrelic.json` and `plugin.json` files described in the [Configuring the Plugin](#Configuring-the-Plugin) section.
 
-###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-microsoft-sqlserver/newrelic_microsoft_sqlserver_plugin-3.2.3_20171018_182625.tar.gz)
+###### [Download Plugin for Manual Installation](https://newrelic-bluemedora.s3.amazonaws.com/com-bluemedora-microsoft-sqlserver/newrelic_microsoft_sqlserver_plugin-4.0.0_20180913_124641.tar.gz)
 
 ----
 
