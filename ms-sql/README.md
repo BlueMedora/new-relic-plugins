@@ -180,7 +180,7 @@ Make a copy of this template and rename it to `plugin.json`. Shown below is an e
 | query_count | Optional parameter, the number of queries to return for "Top X Queries" metrics |
 | query_order_by | Optional parameter, the field to sort by for "Top X Queries" metrics. Valid values for this parameter are "total_elapsed_time", "total_logical_writes", "total_logical_reads", "total_physical_reads", "execution_count", "execution_time", "avg_execution_time", "unique_plans", or "last_execution" |
 | use_ntlm_v2 | Optional parameter, specifies whether or not to use NTLMv2 authentication. Default is false. |
-| request_ssl | Optional parameter, specifies whether or not to request SSL certification. Default is false. |
+| ssl_config | Optional parameter, specifies whether or not to request SSL certification and if it should be verified. Default setting is **"No Verify"** (SSL enabled/certificate not verified); other choices include **"No SSL"** (SSL disabled) and **"Verify"** (SSL enabled/certificate is verified).  |
 | send_to_plugin | Indicates whether or not to send data to New Relic Plugins. See [Blue Medora's New Relic Knobs and Levers Readme](https://github.com/BlueMedora/new-relic-plugins/blob/master/configuration-variants/readme.md) for more details |
 | send_to_insights | Indicates whether or not to send data to New Relic Insights. See [Blue Medora's New Relic Knobs and Levers Readme](https://github.com/BlueMedora/new-relic-plugins/blob/master/configuration-variants/readme.md) for more details |
 
